@@ -3,7 +3,9 @@ import 'package:intl/intl.dart';
 import 'package:kalimati_bazar/constants/color_const.dart';
 import 'package:kalimati_bazar/constants/font_const.dart';
 import 'package:kalimati_bazar/constants/string_const.dart';
+import 'package:kalimati_bazar/provider/theme_provider.dart';
 import 'package:kalimati_bazar/views/widgets/custom_drop_down.dart';
+import 'package:provider/provider.dart';
 
 class AppAt extends StatefulWidget {
   final Function(String) onDropdownChanged;
@@ -25,6 +27,8 @@ class _AppAtState extends State<AppAt> {
 
   @override
   Widget build(BuildContext context) {
+    final themeChanger = Provider.of<ThemeProvider>(context);
+    final isDarkMode = themeChanger.themeMode == ThemeMode.dark;
     return Row(
       children: [
         Padding(
@@ -37,7 +41,7 @@ class _AppAtState extends State<AppAt> {
                 style: TextStyle(
                   fontFamily: popmedium,
                   fontSize: 24,
-                  color: homepageTextColor,
+                  color: isDarkMode ? iconBackgroundColor : homepageTextColor,
                 ),
               ),
               Text(

@@ -6,10 +6,12 @@ import 'package:kalimati_bazar/constants/font_const.dart';
 import 'package:kalimati_bazar/constants/string_const.dart';
 import 'package:kalimati_bazar/controllers/api_controller.dart';
 import 'package:kalimati_bazar/models/daily__market_price_model.dart';
+import 'package:kalimati_bazar/provider/theme_provider.dart';
 import 'package:kalimati_bazar/views/widgets/app_at.dart';
 import 'package:kalimati_bazar/views/widgets/custom_drop_down.dart';
 import 'package:kalimati_bazar/views/widgets/search_bar.dart';
 import 'package:kalimati_bazar/views/widgets/single_item.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key});
@@ -68,6 +70,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+     final themeChanger = Provider.of<ThemeProvider>(context);
+    final isDarkMode = themeChanger.themeMode == ThemeMode.dark;
     return Scaffold(
       body: SafeArea(
         child: Column(
