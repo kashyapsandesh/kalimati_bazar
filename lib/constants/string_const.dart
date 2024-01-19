@@ -1,0 +1,14 @@
+String appName = "KaliMati Bazzar";
+String onboarding1Title = "Fresh And Hygienic ";
+String onboarding1Des = "Nepal Largest Vegetables Marketplace";
+String onboarding2Title = "Get Daily Prices";
+String onboarding2Des = "Get Daily Vegetables Price Updates";
+String settings = "Settings";
+String notices = "Notices";
+String home = "Home";
+String tables = "Tables";
+String todayprice = "Today Prices";
+String search = "search";
+String skip = "Skip";
+String next = "Next";
+String start = "Start";
