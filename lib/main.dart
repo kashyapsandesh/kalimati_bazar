@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kalimati_bazar/provider/daily_market_provider.dart';
 import 'package:kalimati_bazar/provider/theme_provider.dart';
 import 'package:kalimati_bazar/views/screens/kalimati_splash_screen.dart';
 import 'package:provider/provider.dart';
@@ -13,7 +14,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => ThemeProvider())],
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => ThemeProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => DailyMarketPriceProvider(),
+        )
+      ],
       child: Builder(
         builder: (context) {
           final themeChanger = Provider.of<ThemeProvider>(context);
