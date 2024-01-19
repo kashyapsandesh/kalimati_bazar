@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kalimati_bazar/provider/daily_market_provider.dart';
+import 'package:kalimati_bazar/provider/notice_provider.dart';
 import 'package:kalimati_bazar/provider/theme_provider.dart';
 import 'package:kalimati_bazar/views/screens/kalimati_splash_screen.dart';
 import 'package:provider/provider.dart';
@@ -20,6 +21,9 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (_) => DailyMarketPriceProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => NoticesProvider(),
         )
       ],
       child: Builder(

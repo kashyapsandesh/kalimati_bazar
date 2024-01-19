@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:kalimati_bazar/constants/color_const.dart';
+import 'package:kalimati_bazar/views/screens/notices/notices_screen.dart';
 
 class searchBar extends StatelessWidget {
   final TextEditingController searchController;
@@ -22,7 +23,7 @@ class searchBar extends StatelessWidget {
             padding:
                 const EdgeInsets.symmetric(horizontal: 24.0, vertical: 5.0),
             child: TextField(
-              onChanged:onqueryChange ,
+              onChanged: onqueryChange,
               decoration: InputDecoration(
                 hintText: "Search",
                 hintStyle: const TextStyle(color: Colors.grey),
@@ -43,7 +44,10 @@ class searchBar extends StatelessWidget {
         SizedBox(
           width: 60,
           child: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => NoticeScreen()));
+            },
             icon: const Icon(
               Icons.notifications_rounded,
               color: onboardingBackground,

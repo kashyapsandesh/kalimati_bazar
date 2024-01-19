@@ -54,7 +54,7 @@ class _TableScreenState extends State<TableScreen> {
                                     border: Border.all(),
                                     color: Colors.blue,
                                   ),
-                                  child: Row(
+                                  child: const Row(
                                     children: [
                                       SizedBox(
                                         width: 150,
@@ -116,7 +116,7 @@ class _TableScreenState extends State<TableScreen> {
                                                     .dailyMarketPriceData![
                                                         index]
                                                     .commodityname!,
-                                                style: TextStyle(
+                                                style: const TextStyle(
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                               ),
@@ -159,7 +159,7 @@ class _TableScreenState extends State<TableScreen> {
                               ],
                             ),
                           )
-                        : Center(
+                        : const Center(
                             child: CircularProgressIndicator(
                               color: Colors
                                   .blue, // or use your onboardingBackground color
