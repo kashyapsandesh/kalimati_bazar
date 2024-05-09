@@ -30,7 +30,8 @@ class NoticesProvider extends ChangeNotifier {
 
   Future<void> fetchNotices() async {
     try {
-      final response = await _dio!.get('http://localhost:3000/api/scrape');
+      final response =
+          await _dio!.get('https://kalimatibazar.vercel.app/api/scrape');
       print('Response Status Code: ${response.statusCode}');
       print('Response Body: ${response.data}');
 

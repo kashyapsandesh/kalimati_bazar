@@ -30,10 +30,9 @@ class singleItem extends StatelessWidget {
         children: [
           // Image and Price in Top Right
           Positioned.fill(
-            child: Image.asset(
-              imageUrl,
-              fit: BoxFit.fill,
-            ),
+            child: FadeInImage(
+                placeholder: AssetImage("assets/images/placeholder.png"),
+                image: AssetImage(imageUrl)),
           ),
           Positioned(
             top: 8,
