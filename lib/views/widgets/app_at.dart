@@ -32,7 +32,7 @@ class _AppAtState extends State<AppAt> {
     return Row(
       children: [
         Padding(
-          padding: const EdgeInsets.all(18.0),
+          padding: const EdgeInsets.all(10.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
