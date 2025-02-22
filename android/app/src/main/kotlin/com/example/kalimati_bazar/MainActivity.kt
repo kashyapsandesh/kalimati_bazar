@@ -1,4 +1,4 @@
-package com.example.kalimati_bazar
+package com.kalimati.kalimati_bazar
 
 import io.flutter.embedding.android.FlutterActivity
 
